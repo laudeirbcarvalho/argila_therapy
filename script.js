@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.querySelector('.menu');
     
     if (menuMobile && menu) {
-        menuMobile.addEventListener('click', function() {
+        menuMobile.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             menu.classList.toggle('active');
             
             // Alternar ícone do menu
@@ -13,6 +15,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
             } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Fechar menu ao clicar em um link
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menu.classList.remove('active');
+                const icon = menuMobile.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', function(e) {
+            if (!menu.contains(e.target) && !menuMobile.contains(e.target) && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                const icon = menuMobile.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
