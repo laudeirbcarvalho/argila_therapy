@@ -1,24 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Menu Mobile Toggle
-    const menuMobile = document.querySelector('.menu-mobile');
-    const menu = document.querySelector('.menu');
+    // Menu Mobile Toggle - Inicialização imediata
+    initMobileMenu();
     
-    if (menuMobile && menu) {
-        menuMobile.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            menu.classList.toggle('active');
+    // Garantir que o menu mobile seja inicializado após o carregamento completo
+    window.addEventListener('load', function() {
+        initMobileMenu();
+    });
+    
+    // Função para inicializar o menu mobile
+    function initMobileMenu() {
+        const menuMobile = document.querySelector('.menu-mobile');
+        const menu = document.querySelector('.menu');
+        
+        console.log('Menu mobile:', menuMobile);
+        console.log('Menu:', menu);
+        
+        if (menuMobile && menu) {
+            // Garantir que o menu mobile seja clicável
+            menuMobile.style.cursor = 'pointer';
+            menuMobile.style.zIndex = '1001';
             
-            // Alternar ícone do menu
-            const icon = menuMobile.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
+            menuMobile.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                menu.classList.toggle('active');
+                console.log('Menu toggle clicked, active:', menu.classList.contains('active'));
+                
+                // Alternar ícone do menu
+                const icon = menuMobile.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
         
         // Fechar menu ao clicar em um link
         const menuLinks = menu.querySelectorAll('a');

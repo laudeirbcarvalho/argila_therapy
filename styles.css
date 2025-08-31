@@ -172,6 +172,8 @@ section {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1001;
+    position: relative;
 }
 
 /* Hero Section */
