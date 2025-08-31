@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="jar-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8f4e9" />
+      <stop offset="100%" stop-color="#e8e4d9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Jar -->
+  <rect x="8" y="6" width="16" height="20" rx="2" ry="2" fill="url(#jar-gradient)" stroke="#7a9e9f" stroke-width="1" />
+  
+  <!-- Label -->
+  <rect x="10" y="12" width="12" height="8" rx="1" ry="1" fill="#7a9e9f" />
+  
+  <!-- Text on label -->
+  <text x="16" y="17" font-family="Arial" font-size="4" font-weight="bold" text-anchor="middle" fill="white">ADLUX</text>
+</svg>

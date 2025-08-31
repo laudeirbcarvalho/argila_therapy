@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="skin-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe0d0" />
+      <stop offset="100%" stop-color="#ffd0b8" />
+    </linearGradient>
+    <linearGradient id="glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.2" />
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="400" height="300" fill="#f8f4e9" rx="10" ry="10" />
+  
+  <!-- Before and After Faces -->
+  <g transform="translate(100, 150)" filter="url(#shadow)">
+    <!-- Before Face -->
+    <circle cx="0" cy="0" r="70" fill="url(#skin-gradient)" />
+    <circle cx="-25" cy="-15" r="5" fill="#7a9e9f" opacity="0.7" /> <!-- Left eye -->
+    <circle cx="25" cy="-15" r="5" fill="#7a9e9f" opacity="0.7" /> <!-- Right eye -->
+    <path d="M -20 20 Q 0 40 20 20" fill="none" stroke="#7a9e9f" stroke-width="3" opacity="0.7" /> <!-- Mouth -->
+    
+    <!-- Skin issues -->
+    <circle cx="-40" cy="-30" r="5" fill="#e8a87c" opacity="0.5" /> <!-- Blemish -->
+    <circle cx="35" cy="10" r="4" fill="#e8a87c" opacity="0.5" /> <!-- Blemish -->
+    <circle cx="-20" cy="30" r="6" fill="#e8a87c" opacity="0.5" /> <!-- Blemish -->
+    
+    <!-- "Before" label -->
+    <rect x="-30" y="-90" width="60" height="25" rx="12" ry="12" fill="#7a9e9f" opacity="0.8" />
+    <text x="0" y="-75" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">ANTES</text>
+  </g>
+  
+  <g transform="translate(300, 150)" filter="url(#shadow)">
+    <!-- After Face -->
+    <circle cx="0" cy="0" r="70" fill="url(#skin-gradient)" />
+    <circle cx="-25" cy="-15" r="5" fill="#7a9e9f" opacity="0.7" /> <!-- Left eye -->
+    <circle cx="25" cy="-15" r="5" fill="#7a9e9f" opacity="0.7" /> <!-- Right eye -->
+    <path d="M -25 20 Q 0 45 25 20" fill="none" stroke="#7a9e9f" stroke-width="3" opacity="0.7" /> <!-- Smile -->
+    
+    <!-- Glowing skin effect -->
+    <circle cx="0" cy="0" r="75" fill="url(#glow-gradient)" opacity="0.3" filter="url(#glow)" />
+    
+    <!-- "After" label -->
+    <rect x="-30" y="-90" width="60" height="25" rx="12" ry="12" fill="#7a9e9f" opacity="0.8" />
+    <text x="0" y="-75" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">DEPOIS</text>
+  </g>
+  
+  <!-- Arrow between faces -->
+  <path d="M 180 150 L 220 150" stroke="#7a9e9f" stroke-width="3" stroke-dasharray="5,3" />
+  <polygon points="220,150 215,145 215,155" fill="#7a9e9f" />
+  
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#7a9e9f">Resultados Visíveis</text>
+  
+  <!-- Benefits -->
+  <text x="200" y="260" font-family="Arial" font-size="14" text-anchor="middle" fill="#7a9e9f">Pele radiante, uniforme e rejuvenescida</text>
+</svg>

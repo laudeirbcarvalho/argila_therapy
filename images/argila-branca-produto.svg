@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="jar-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8f4e9" />
+      <stop offset="100%" stop-color="#e8e4d9" />
+    </linearGradient>
+    <linearGradient id="cream-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8f4e9" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2" />
+    </filter>
+  </defs>
+  
+  <!-- Jar -->
+  <g filter="url(#shadow)">
+    <!-- Jar lid -->
+    <path d="M100 60 L200 60 L190 80 L110 80 Z" fill="#7a9e9f" />
+    
+    <!-- Jar body -->
+    <path d="M110 80 L190 80 L200 240 L100 240 Z" fill="url(#jar-gradient)" stroke="#e0dcd1" stroke-width="1" />
+    
+    <!-- Cream inside -->
+    <path d="M115 100 L185 100 L190 230 L110 230 Z" fill="url(#cream-gradient)" />
+  </g>
+  
+  <!-- Label -->
+  <rect x="120" y="130" width="60" height="80" rx="5" ry="5" fill="#7a9e9f" opacity="0.9" />
+  
+  <!-- Text on label -->
+  <text x="150" y="160" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">ARGILA</text>
+  <text x="150" y="175" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">BRANCA</text>
+  <text x="150" y="195" font-family="Arial" font-size="8" text-anchor="middle" fill="white">ADLUX</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="120" r="3" fill="#e8a87c" />
+  <circle cx="150" cy="210" r="3" fill="#e8a87c" />
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <style>
+    .text { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+    .white { fill: #ffffff; }
+    .accent { fill: #e8a87c; }
+  </style>
+  <text x="10" y="40" class="text white" font-size="30">ADLUX</text>
+  <circle cx="180" cy="25" r="15" class="accent" />
+</svg>
